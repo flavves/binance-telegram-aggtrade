@@ -122,7 +122,7 @@ def yuksekhacimliler():
                         sozluk2[a["stream"].split("@")[0]]["veriler"].append(a["data"])
                     
                     
-                    if len(sozluk2[a["stream"].split("@")[0]]["veriler"]) >300:
+                    if len(sozluk2[a["stream"].split("@")[0]]["veriler"]) >1000:
                             
                         dAdi="jsons/"+a["stream"].split("@")[0]+".json"
                         
@@ -193,7 +193,7 @@ def coinler1():
                         sozluk2[a["stream"].split("@")[0]]["veriler"].append(a["data"])
                     
                     
-                    if len(sozluk2[a["stream"].split("@")[0]]["veriler"]) >1000:
+                    if len(sozluk2[a["stream"].split("@")[0]]["veriler"]) >300:
                         print("bin veri aşıldı.")    
                         dAdi="jsons/"+a["stream"].split("@")[0]+".json"
                         
@@ -422,17 +422,17 @@ y = threading.Thread(target=yuksekhacimliler)
 y.start()    
 
 
-#y1 = threading.Thread(target=coinler1)
-#y1.start()    
+y1 = threading.Thread(target=coinler1)
+y1.start()    
 
-#y2 = threading.Thread(target=coinler2)
-#y2.start()    
+y2 = threading.Thread(target=coinler2)
+y2.start()    
 
-#y3 = threading.Thread(target=coinler3)
-#y3.start()    
+y3 = threading.Thread(target=coinler3)
+y3.start()    
 
-#y4 = threading.Thread(target=coinler4)
-#y4.start()    
+y4 = threading.Thread(target=coinler4)
+y4.start()    
 
 
 
