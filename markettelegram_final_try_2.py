@@ -205,7 +205,7 @@ def telegrambotu():
                     coin=gelen_mesaj.split(" ")[1][1:].upper()+"USDT"
                     zaman=int(gelen_mesaj.split(" ")[2])
                   
-                    dAdi="jsons/"+coin+".json"
+                    dAdi="jsons/"+coin.lower()+".json"
                     try:      
                             with open(dAdi) as f:
                                 sozluka = json.load(f)
